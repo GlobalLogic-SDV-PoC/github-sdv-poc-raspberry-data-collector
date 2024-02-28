@@ -1,0 +1,26 @@
+# ======= AWS section ======= #
+boto3==1.26.138
+awsiotsdk==1.15.1
+awscrt==0.16.18
+# ======= End Of AWS section ======= #
+
+# ======= AZURE section ======= #
+azure-cli==2.49.0
+# ======= End Of AZURE section ======= #
+
+
+# ======= Python section ======= #
+docker==6.1.2
+python-dotenv==1.0.0
+# ======= End Of Pytest section ======= #
+
+
+# ======= Pytest section ======= #
+## Main framework
+pytest==7.3.1
+
+## Pytest Plugins
+pytest-html==3.2.0
+pytest-instafail==0.5.0
+allure-pytest==2.13.2
+# ======= End Of Pytest section ======= #

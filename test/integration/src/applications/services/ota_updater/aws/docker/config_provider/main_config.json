@@ -1,0 +1,10 @@
+{
+    "ipc": {
+        "host": "localhost",
+        "service": "5555",
+        "header_buffer_size": 2000,
+        "body_buffer_size": 5000
+    },
+    "download_path": "./update_file",
+    "update_topic": "/client/sub"
+}

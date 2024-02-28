@@ -1,0 +1,2 @@
+class DockerTags:
+    LATEST = 'latest'

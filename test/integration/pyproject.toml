@@ -1,0 +1,54 @@
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--strict-markers -ra --alluredir reports/allure-results --self-contained-html --html=reports/pytest-report-local.html --instafail --capture=tee-sys"
+markers = [
+    "smoke: smoke tests",
+    "regression: regression tests",
+    "data_collector: data_collector service tests",
+    "ota_updater: ota_updater",
+    "p1: p1 priority", 
+    "p2: p2 priority", 
+    "p3: p3 priority", 
+    "p4: p4 priority", 
+    "system: System scenarios", 
+    "integration: Integration test scenarios",
+    "skip_if_dev: Tests that not going to be run",
+    "to_be_automated: Tests that going to be automated",
+    "task_123: Test cases for TASK_123",
+    "task_124: Test cases for TASK_124",
+    "task_125: Test cases for TASK_125",
+    "task_126: Test cases for TASK_126",
+    "task_127: Test cases for TASK_127",
+]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 150
+
+[tool.black]
+line-length = 150
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  # The following are specific to Black, you probably don't want those.
+  | blib2to3
+  | tests/data
+  | profiling
+)/
+'''

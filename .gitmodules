@@ -1,0 +1,3 @@
+[submodule "dep/internal/data_collector"]
+	path = dep/internal/data_collector
+	url = https://github.com/GlobalLogic-SDV-PoC/github-sdv-poc-msp-data-collector.git

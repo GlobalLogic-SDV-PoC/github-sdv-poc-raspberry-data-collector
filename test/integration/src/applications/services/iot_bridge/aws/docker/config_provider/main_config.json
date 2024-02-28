@@ -1,0 +1,17 @@
+{
+    "ipc": {
+        "port": 5555,
+        "max_listen_connections": 2147483647,
+        "reuse_address": true,
+        "enable_connection_aborted": false,
+        "header_buffer_size": 2000,
+        "body_buffer_size": 5000
+    },
+    "iot": {
+        "endpoint": "a2vups147zkgmn-ats.iot.eu-west-1.amazonaws.com",
+        "certificate": "/var/security/certificate.pem.crt",
+        "private": "/var/security/private.pem.key",
+        "root": "/var/security/AmazonRootCA1.pem",
+        "clientId": "auto_test_fcb1523f-b108-4845-9f92-6d4c54e9c060"
+    }
+}

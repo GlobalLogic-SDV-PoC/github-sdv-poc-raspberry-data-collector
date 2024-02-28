@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+    commands:
+      - echo Entered the install phase...
+      - pip install -r ./test/integration/requirements.txt
+  build:
+    commands:
+      - echo Running integration tests and generate reports...
+      - export PLATFORM='raspberry'
+      - export CLOUD_PROVIDER='AWS'
+      - export RUN_MODE='strict'
+      - export TC_ADAPTERS='confluence, testrail'
+      - export IOTBRIDGE_DOCKER_TAG='latest'
+      - export OTAUPDATER_DOCKER_TAG='latest'
+      - export DATACOLLECTOR_DOCKER_TAG=$Commit_ID
+      
+      - cd test/integration
+      - pytest . --junitxml=../../reports/pytest_report.xml
+reports:
+  pytest_reports:
+    files:
+      - pytest_report.xml
+    base-directory: reports/
+    file-format: JUNITXML
